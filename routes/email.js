@@ -2,10 +2,10 @@ const express = require('express');
 const router = express.Router();
 var nodemailer = require('nodemailer');
 
-router.post("/", async(req, res) => {
+router.post("/", (req, res) => {
     try{
         var pass = {
-            query: '46bruno46'
+            query: 'qesjsidfdmqgxeud'
         }
         
         var transporter = nodemailer.createTransport({
