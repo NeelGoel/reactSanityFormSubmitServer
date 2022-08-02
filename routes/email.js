@@ -4,15 +4,15 @@ var nodemailer = require('nodemailer');
 
 router.post("/", async(req, res) => {
     try{
-        var gmailPassword = {
-            query: 'kynkkpidulwletai'
+        var pass = {
+            query: 'NDZicnVubzQ2'
         }
         
         var transporter = nodemailer.createTransport({
             service: 'gmail',
             auth: {
               user: req.body.from,
-              pass: gmailPassword[req.body.password]
+              pass: atob(pass[req.body.password])
             }
           });
           
